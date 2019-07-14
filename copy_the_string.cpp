@@ -24,13 +24,13 @@ int main(){
 }
 // copying the s1 to s2 with pointer notation
 void copy1( char *s1, const char *s2){
-     for ( ; ( *s1 = *s2 ) != '\0'; s1++ ,s2++)
-         ;
+    for ( ; ( *s1 = *s2 ) != '\0'; s1++ ,s2++)
+        ;
 }
 // copying the s1 to s2 with array notation
 void copy2( char s1[], const char s2[] ){
-     for ( int i = 0; (s1[ i ] = s2[ i ]) != '\0';  i++)
-         ;
+    for ( int i = 0; (s1[ i ] = s2[ i ]) != '\0';  i++)
+        ;
 }
 /*
 void copy1( char *s1, const char *s2){
