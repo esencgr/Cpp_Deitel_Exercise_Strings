@@ -65,5 +65,6 @@ int main(){
     // isprint( 'c' ) : c is a printing char together space char => 1,  not => 0.
     cout << ( isprint( 'Q') ? " Q is a char that different of space " : " Q is not a char that different of space." ) << endl;
     cout << ( isprint( ' ' ) ? " space is a char that different of space " : " space is not a char that different of space." ) << endl;
+
     return 0;
 }
