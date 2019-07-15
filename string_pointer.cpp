@@ -1,5 +1,5 @@
 /*
-string
+ relation of string and pointer.
 */
 #include <iostream>
 #include <stdlib.h>
