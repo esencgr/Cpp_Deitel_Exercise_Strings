@@ -35,6 +35,6 @@ int main(){
     cout << "original string : " << str3 << endl;
     cout << "long int value  : " << z << endl;
     cout << "extra string    : " << extra_ptr3 << endl;
-    
+
     return 0;
 }
