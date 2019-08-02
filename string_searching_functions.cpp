@@ -1,34 +1,36 @@
 // Using of string searching functions.
 /*
+char *strchr( const char *s, int c );
+      Locates the first occurrence of character c in string s. If c is found, a pointer to c in s is
+      returned. Otherwise, a NULL pointer is returned.
+      
+size_t strcspn( const char *s1, const char *s2 );
+      Determines and returns the length of the initial segment of string s1 consisting of characters
+      not contained in string s2.
 
-  char *strchr( const char *s, char c ); ( finding first location and )
-      --> This function determines 'c' characater's first location. If it finds,
-          returned a pointer that showing c, else returned NULL pointer.
+size_t strspn( const char *s1, const char *s2 );
+      Determines and returns the length of the initial segment of string s1 consisting only of
+      characters contained in string s2.
 
-  size_t strcspn( const char *s1, const char *s2 );
-      --> This function finds that, characters in s1 , absent of first part of
-          the s2 . And returns this part's size.
+char *strpbrk( const char *s1, const char *s2 );
+      Locates the first occurrence in string s1 of any character in string s2. If a character from
+      string s2 is found, a pointer to the character in string s1 is returned. Otherwise, a NULL
+      pointer is returned.
 
-  size_t strspn( const char *s1, const char *s2 );
-      --> This function finds that, characters in s1 , include of first part of
-          the s2 . And returns this part's size.
+char *strrchr( const char *s, int c );
+      Locates the last occurrence of c in string s. If c is found, a pointer to c in string s is
+      returned. Otherwise, a NULL pointer is returned.
 
-  char *strpbrk( const char *s1, const char *s2 );
-      --> This function finds that in s1's first location of any characters in s2.
-          If it finds, returned a pointer that showing character in the s1, else
-          returned NULL pointer.
+char *strstr( const char *s1, const char *s2 );
+      Locates the first occurrence in string s1 of string s2. If the string is found, a pointer to the
+      string in s1 is returned. Otherwise, a NULL pointer is returned.
 
-  char *strrchr( const char *s, int c );
-      --> This function determines 'c' character's last location.
-          If it finds, returned a pointer that showing character c of find in the
-          s string, else  returned NULL pointer.
-
-  char *strstr( const char *s1, const cahr *s2 );
-      --> This function determines s1 string's last location in the s2 string's.
-          If it finds, returned a pointer that showing s1, else  returned NULL pointer.
-
-  char *strtok( const char *s, int c );
-      --> This function separates the s1 by determined characters in s2, like a atom.
+char *strtok( char *s1, const char *s2 );
+      A sequence of calls to strtok breaks string s1 into “tokens”—logical pieces such as words
+      in a line of text—separated by characters contained in string s2. The first call contains s1
+      as the first argument, and subsequent calls to continue tokenizing the same string contain
+      NULL as the first argument. A pointer to the current token is returned by each call. If there
+      are no more tokens when the function is called, NULL is returned.
 
 */
 #include <iostream>
