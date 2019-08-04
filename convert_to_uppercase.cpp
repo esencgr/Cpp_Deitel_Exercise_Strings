@@ -1,5 +1,7 @@
 // Using flexible data and flexible pointers in functions.
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 #include <string>
 using namespace std;
 
@@ -16,7 +18,7 @@ int main(){
     cout << "The string is before unconverted :" << string << endl;
     conv_cap ( string );
     cout << "The string is after converted :" << string << endl;
-
+    cout << (char)(toupper( string[ 0 ] )) << endl;
     return 0;
 }
 
