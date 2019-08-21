@@ -7,13 +7,13 @@ lines of text. Print the result.
 #include <cstring>
 #include <iomanip>
 using namespace std;
-#define SIZE 20
+#define SIZE 80
+#define SIZE1 26
 
 int main( ){
 
-    char text[ 3 ][ SIZE ], search[ SIZE ], *search_ptr;
-    int count=0;
-
+    char text[ 3 ][ SIZE ], *search_ptr;
+    int characters[ SIZE1 ], count = 0;
     cout << "Enter a line of text: ";
     for ( int i = 0; i < 3; i++ ){
         cin.getline( &text[ i ][ 0 ], SIZE );
@@ -27,19 +27,22 @@ int main( ){
          }
     }
 
-    cout << "Enter a text for search: ";
-    cin >> search;
-
-    for ( int i = 0; i < 3; i++ ){
-        search_ptr = &text[ i ][ 0 ];
-        while ( search_ptr = strstr( search_ptr, search )){
-             count++;
-             search_ptr++;
+    for ( int i = 0; i < SIZE1 ; i++ ){
+        count = 0;
+        for ( int j = 0; j < 3; j++ ){
+            search_ptr = &text[ j ][ 0 ];
+            while ( search_ptr = strchr( search_ptr, 'a' + i )){
+                count++;
+                search_ptr++;
+            }
         }
+        characters[ i ] = count;
     }
 
-    cout << "\nThe total occurrences of \"" << search << "\" in the text is:"
-         << setw( 3 ) << count << endl;
+    cout << "\nThe total occurrences of each character:\n";
+    for ( int w = 0; w < SIZE1; ++w )
+        cout << setw( 3 ) << (char)( 'a' + w ) << ':' << setw( 3 )
+             << characters[ w ] << '\n';
 
     return 0;
 }

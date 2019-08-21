@@ -1,50 +1,43 @@
 /*
-Write a program based on the program of Exercise 8.16 that inputs several lines of text and a search
-string, and uses function strstr to determine the total number of occurrences of the string in the
-lines of text. Print the result.
+(Search String)
+Write a program that inputs a line of text and a search string from the keyboard. Using function strstr,
+locate the first occurrence of the search string in the line of text, and assign the location to variable
+searchPtr of type char *. If the search string is found, print the remainder of the line of text beginning
+with the search string. Then, use strstr again to locate the next occurrence of the search string in the
+line of text. If a second occurrence is found, print the remainder of the line of text beginning with the
+second occurrence. (Hint: The second call to strstr should contain the expression searchPtr + 1 as its
+first argument.)
 */
 #include <iostream>
 #include <cstring>
-#include <iomanip>
 using namespace std;
 #define SIZE 20
 
 int main( ){
 
-    char text[ 3 ][ SIZE ], search[ SIZE ], *search_ptr;
-    int count=0;
+    char text[ SIZE ], search[ SIZE ], *search_ptr;
 
     cout << "Enter a line of text: ";
-    for ( int i = 0; i < 3; i++ ){
-        cin.getline( &text[ i ][ 0 ], SIZE );
-    }
-
-    // make all characters lowercase
-    for ( int i = 0; i < 2; i++ ){
-         for ( int j = 0; text[ i ][ j ] != '\0'; j++ ){
-             char c = (char)( tolower( text[ i ][ j ] ));
-             text[ i ][ j ] = c;
-         }
-    }
+    cin.getline( text, SIZE );
 
     cout << "Enter a text for search: ";
     cin >> search;
 
-    for ( int i = 0; i < 3; i++ ){
-        search_ptr = &text[ i ][ 0 ];
-        while ( search_ptr = strstr( search_ptr, search )){
-             count++;
-             search_ptr++;
-        }
-    }
+    search_ptr = strstr( text, search );
+    if ( search_ptr ){
+        cout << &search_ptr << endl;
+        cout << "The remainder of the line beginning with the first occurrence of --> "
+             << "\"" << search << "\"" << "\n" << search_ptr << endl;
 
-    cout << "\nThe total occurrences of \"" << search << "\" in the text is:"
-         << setw( 3 ) << count << endl;
+             search_ptr = strstr( search_ptr + 1, search );
+             if ( search_ptr )
+                 cout << "The remainder of the line beginning with the second occurrence of --> "
+                      << "\"" << search << "\"" << "\n" << search_ptr << endl;
+             else
+                 cout << "The search string appeared only once.\n";
+    }
+    else
+        cout << "\"" << search << "\" not found.\n";
 
     return 0;
 }
-// ++search_ptr = strstr( &text[ i ][ 0 ], search );
-// if ( search_ptr )
-//     count++;
-//
-// search_ptr = 0;

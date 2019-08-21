@@ -7,11 +7,11 @@ lines of text. Print the result.
 #include <cstring>
 #include <iomanip>
 using namespace std;
-#define SIZE 20
+#define SIZE 80
 
 int main( ){
 
-    char text[ 3 ][ SIZE ], search[ SIZE ], *search_ptr;
+    char text[ 3 ][ SIZE ], search, *search_ptr;
     int count=0;
 
     cout << "Enter a line of text: ";
@@ -27,12 +27,12 @@ int main( ){
          }
     }
 
-    cout << "Enter a text for search: ";
+    cout << "Enter a character for search: ";
     cin >> search;
 
     for ( int i = 0; i < 3; i++ ){
         search_ptr = &text[ i ][ 0 ];
-        while ( search_ptr = strstr( search_ptr, search )){
+        while ( search_ptr = strchr( search_ptr, search )){
              count++;
              search_ptr++;
         }
