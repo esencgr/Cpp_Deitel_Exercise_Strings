@@ -26,7 +26,7 @@ int tolower( int c );
 
 int toupper( int c );   If c is a lowercase letter, toupper returns c as an uppercase letter.
                         Otherwise, toupper returns the argument unchanged.
-                        
+
 int isspace( int c );   Returns a true value if c is a white-space character—newline
                         ('\n'), space (' '), form feed ('\f'), carriage return ('\r'),
                         horizontal tab ('\t') or vertical tab ('\v')—and 0 otherwise.
