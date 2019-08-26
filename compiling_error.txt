@@ -1,4 +1,0 @@
-D:\GitHub\Cpp_deitel_exercise_strings\my_string_process_func_8.28.cpp: In function 'char* copy1_n(char*, const char*, int)':
-D:\GitHub\Cpp_deitel_exercise_strings\my_string_process_func_8.28.cpp:47:48: error: expected primary-expression before ')' token
-     for ( ; ( *s1 = *s2 ) != '\0'; s1++ ,s2++, )
-                                                ^

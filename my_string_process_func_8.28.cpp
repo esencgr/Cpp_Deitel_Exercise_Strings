@@ -22,10 +22,10 @@ int main(){
     copy2( string3, string4 );
     cout << "string3 : " << string3 << endl;
 
-    copy1_n( string1, string2, 7 );
+    copy1_n( string1, string2, 8 );
     cout << "string1_n : " << string1 << endl;
 
-    copy2_n( string3, string4, 7 );
+    copy2_n( string3, string4, 5 );
     cout << "string3_n : " << string3 << endl;
 
     return 0;
