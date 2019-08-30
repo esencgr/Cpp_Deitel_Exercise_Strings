@@ -54,6 +54,7 @@ int my_strcmp2( const char s1[], const char s2[] ){
 
     for ( sub = 0; s1[ sub ] == s2[ sub ]; sub++ )
         ;
+        
     sub--;
 
     if ( s1[ sub ] == '\0' && s2[ sub ] == '\0')
