@@ -26,7 +26,7 @@ void number_of_words( char *text ){
      temp = strtok( text, " " );
          for ( int i = 0; i < SIZE; i++ ){
              while ( temp ){
-                 text_ptr[ count++ ]= temp;
+                 text_ptr[ count++ ] = temp;
                  temp = strtok( 0, " " );
              }
 
