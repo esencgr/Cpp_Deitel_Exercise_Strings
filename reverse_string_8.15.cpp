@@ -13,9 +13,8 @@ void reverse( char * const );
 int main( ){
 
     char text[ SIZE ];
-
     cout << "Enter a line of text:\n";
-    cin.getline( text, SIZE );
+    cin >> text;
 
     reverse ( text );
     cout << endl;

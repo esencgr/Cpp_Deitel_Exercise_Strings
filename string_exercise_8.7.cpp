@@ -9,12 +9,13 @@
 using namespace std;
 #define SIZE 5
 int main(){
-    char str[ SIZE ];
+    string str;
     int sum = 0;
+
     for ( int i = 0; i < 4; i++ ){
         cin >> str;
-        sum += atoi( str );
     }
+
     cout << "sum = " << sum << endl;
 
     return 0;
