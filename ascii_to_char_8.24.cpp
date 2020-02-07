@@ -14,6 +14,6 @@ int main(){
 
          cout << "\nEnter an ASCII character code (EOF to end): ";
     }
-    
+
     return 0;
 }
