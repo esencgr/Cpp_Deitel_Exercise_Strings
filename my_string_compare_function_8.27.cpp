@@ -19,17 +19,17 @@ int my_strncmp2( const char [], const char [], unsigned  );
 
 int main(){
 
-    const char *s1 = "tomato";
-    const char *s2 = "tomato0";
+    const char *s1 = "123A";
+    const char *s2 = "123A";
 
     cout << "s1 : " << s1 << endl;
     cout << "s2 : " << s2 << endl << endl;
 
-    cout << "pointer noatation -> s1 & s2 : " << my_strcmp1( s1, s2 ) << endl;
+    //cout << "pointer noatation -> s1 & s2 : " << my_strcmp1( s1, s2 ) << endl;
     cout << "arraysub notation -> s1 & s2 : " << my_strcmp2( s1, s2 ) << endl << endl;;
 
-    cout << "pointer noatation ( n=3 ) -> s1 & s2 : " << my_strncmp1( s1, s2, 3 ) << endl;
-    cout << "arraysub notation ( n=3 ) -> s1 & s2 : " << my_strncmp2( s1, s2, 3 ) << endl;
+    //cout << "pointer noatation ( n=3 ) -> s1 & s2 : " << my_strncmp1( s1, s2, 3 ) << endl;
+    //cout << "arraysub notation ( n=3 ) -> s1 & s2 : " << my_strncmp2( s1, s2, 3 ) << endl;
 
     return 0;
 }
@@ -54,15 +54,15 @@ int my_strcmp2( const char s1[], const char s2[] ){
 
     for ( sub = 0; s1[ sub ] == s2[ sub ]; sub++ )
         ;
-        
+
     sub--;
 
     if ( s1[ sub ] == '\0' && s2[ sub ] == '\0')
-        return 0;
-    else if ( s1[ sub ] < s2[ sub ] )
-        return -1;
-    else
         return 1;
+    // else if ( s1[ sub ] < s2[ sub ] )
+    //     return -1;
+    else
+        return 0;
 }
 
 int my_strncmp1( const char *s1, const char *s2, unsigned n ){
